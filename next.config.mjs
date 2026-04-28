@@ -14,7 +14,7 @@ const nextConfig = {
   },
   async headers() {
     const immutableAssetCache = 'public, max-age=31536000, immutable';
-    const staticPageCache = 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800';
+    const staticPageCache = 'public, max-age=0, must-revalidate';
 
     return [
       {

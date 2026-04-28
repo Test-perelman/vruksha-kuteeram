@@ -26,7 +26,7 @@ This project is configured as a static-first Next.js App Router site for constra
 - `/` is forced to static rendering with `dynamic = 'error'`, `revalidate = false`, and `fetchCache = 'only-cache'`.
 - There are no API routes, server actions, SSR data loaders, request-time `fetch` calls, or dynamic request APIs.
 - Public brand assets are served with one-year immutable cache headers; hashed `/_next/static` files keep Next.js built-in immutable caching.
-- The HTML shell uses stale-while-revalidate cache headers so repeat traffic can be served by any upstream cache without fresh page execution.
+- The HTML shell revalidates on each visit so content edits appear immediately after deployment.
 - Animations and interactivity remain client-side through Framer Motion, GSAP, and Lenis.
 
 Deploy with the production commands only:
