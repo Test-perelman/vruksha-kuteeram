@@ -21,12 +21,14 @@ npm run start
 
 ## Shared Hosting Performance Mode
 
-This project is configured as a static-first Next.js App Router site for constrained Node.js hosting:
+This project is configured as a static export for constrained shared hosting:
 
 - `/` is forced to static rendering with `dynamic = 'error'`, `revalidate = false`, and `fetchCache = 'only-cache'`.
 - There are no API routes, server actions, SSR data loaders, request-time `fetch` calls, or dynamic request APIs.
-- Public brand assets are served with one-year immutable cache headers; hashed `/_next/static` files keep Next.js built-in immutable caching.
-- The HTML shell revalidates on each visit so content edits appear immediately after deployment.
+- `next build` writes plain static files to `out/`.
+- `npm run start` serves `out/` with the lightweight `server.js` static server instead of `next start`.
+- Public brand assets and hashed `/_next/static` files use immutable cache headers from `server.js`.
+- HTML revalidates on each visit so content edits appear immediately after deployment.
 - Animations and interactivity remain client-side through Framer Motion, GSAP, and Lenis.
 
 Deploy with the production commands only:

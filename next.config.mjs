@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  output: 'export',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -11,31 +12,6 @@ const nextConfig = {
       }
     ],
     formats: ['image/avif', 'image/webp']
-  },
-  async headers() {
-    const immutableAssetCache = 'public, max-age=31536000, immutable';
-    const staticPageCache = 'public, max-age=0, must-revalidate';
-
-    return [
-      {
-        source: '/',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: staticPageCache
-          }
-        ]
-      },
-      {
-        source: '/brand-assets/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: immutableAssetCache
-          }
-        ]
-      }
-    ];
   }
 };
 
