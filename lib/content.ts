@@ -8,8 +8,8 @@ export const company = {
   founderRole: 'Founder',
   award: 'Indian Leadership Award 2019',
   awardEvent: 'Indian Leadership Summit 2019',
-  address: ['403, Abhinandana Jewel', 'Lanco Hills Road, Manikonda', 'Hyderabad'],
-  email: 'vrukshakuteeram2017@gmail.com',
+  address: ['Plot No-931', 'Flat -301', 'Street No-48', 'Ayush Avenue', 'Sri Ayyappa Society'],
+  email: 'hello@vrukshakuteeram.com',
   domains: ['Landscaping', 'Irrigation', 'Vertical Gardening']
 };
 
