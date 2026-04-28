@@ -1,6 +1,6 @@
 export const company = {
   name: 'Vruksha Kuteeram Landscape LLP',
-  logo: '/brand-assets/logos/vruksha-kuteeram-client-logo.png',
+  logo: '/brand-assets/logos/vruksha-kuteeram-client-logo-clean.png',
   established: '2017',
   tagline: 'Studying nature, to immerse you in the lap of nature',
   positioning: 'We, the nature lovers',
