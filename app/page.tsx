@@ -7,6 +7,10 @@ import Hero from '@/components/Hero';
 import ProjectsSection from '@/components/ProjectsSection';
 import ServicesSection from '@/components/ServicesSection';
 
+export const dynamic = 'error';
+export const revalidate = false;
+export const fetchCache = 'only-cache';
+
 export default function Home() {
   return (
     <>
