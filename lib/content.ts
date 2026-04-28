@@ -9,7 +9,7 @@ export const company = {
   award: 'Indian Leadership Award 2019',
   awardEvent: 'Indian Leadership Summit 2019',
   address: ['Plot No-931', 'Flat -301', 'Street No-48', 'Ayush Avenue', 'Sri Ayyappa Society'],
-  email: 'hello@vrukshakuteeram.com',
+  email: 'vrukshakuteeram2017@gmail.com',
   domains: ['Landscaping', 'Irrigation', 'Vertical Gardening']
 };
 
