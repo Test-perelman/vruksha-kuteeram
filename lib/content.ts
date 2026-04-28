@@ -1,6 +1,6 @@
 export const company = {
   name: 'Vruksha Kuteeram Landscape LLP',
-  logo: '/brand-assets/logos/vruksha-kuteeram-client-logo-clean.png',
+  logo: '/brand-assets/logos/vruksha-kuteeram-client-logo-20260429.png',
   established: '2017',
   tagline: 'Studying nature, to immerse you in the lap of nature',
   positioning: 'We, the nature lovers',
@@ -24,19 +24,19 @@ export const navigation = [
 export const services = [
   {
     title: 'Landscaping',
-    image: '/brand-assets/services/service-landscaping.png',
+    image: '/brand-assets/services/service-landscaping-20260429.png',
     summary: 'Designed outdoor spaces with layered planting, lawns, paths, and long-term upkeep in mind.',
     points: ['Garden design', 'Planting beds', 'Maintenance-ready spaces']
   },
   {
     title: 'Irrigation',
-    image: '/brand-assets/services/service-irrigation.png',
+    image: '/brand-assets/services/service-irrigation-20260429.png',
     summary: 'Drip and sprinkler systems planned into the landscape so plants stay healthy and water use stays practical.',
     points: ['Drip irrigation', 'Sprinkler systems', 'Water-conscious planning']
   },
   {
     title: 'Vertical Gardening',
-    image: '/brand-assets/services/service-vertical-gardening.png',
+    image: '/brand-assets/services/service-vertical-gardening-20260429.png',
     summary: 'Living wall systems that bring dense greenery into compact outdoor, facade, and patio spaces.',
     points: ['Living walls', 'Dense foliage texture', 'Integrated watering']
   }
