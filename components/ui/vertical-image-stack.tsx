@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, type PanInfo, useReducedMotion } from 'framer-motion';
 import { ArrowDown, ArrowUp } from 'lucide-react';
 import Image from 'next/image';
-import { useCallback, useEffect, useRef, useState, type WheelEvent } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export type VerticalImageStackItem = {
   name: string;
@@ -32,6 +32,7 @@ export function VerticalImageStack({
   const [currentIndex, setCurrentIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(items.length - 1, 0)));
   const safeCurrentIndex = Math.min(currentIndex, Math.max(items.length - 1, 0));
   const lastNavigationTime = useRef(0);
+  const rootRef = useRef<HTMLDivElement | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -79,13 +80,22 @@ export function VerticalImageStack({
     }
   };
 
-  const handleWheel = useCallback(
-    (event: WheelEvent<HTMLDivElement>) => {
-      if (Math.abs(event.deltaY) < 30) return;
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+
+    const handleWheel = (event: globalThis.WheelEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (Math.abs(event.deltaY) < 8) return;
       navigate(event.deltaY > 0 ? 1 : -1);
-    },
-    [navigate]
-  );
+    };
+
+    root.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => root.removeEventListener('wheel', handleWheel);
+  }, [navigate]);
 
   const getCardStyle = useCallback(
     (index: number) => {
@@ -144,8 +154,8 @@ export function VerticalImageStack({
 
   return (
     <div
-      className={`relative flex min-h-[600px] w-full items-center justify-center overflow-hidden ${className}`}
-      onWheel={handleWheel}
+      ref={rootRef}
+      className={`relative flex min-h-[600px] w-full touch-none items-center justify-center overflow-hidden overscroll-contain ${className}`}
       aria-roledescription="carousel"
       aria-label="Project image carousel"
     >
