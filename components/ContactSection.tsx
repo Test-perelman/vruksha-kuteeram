@@ -53,7 +53,13 @@ export default function ContactSection() {
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-forest-950 text-earth-300">
                 <MapPin className="h-5 w-5" />
               </span>
-              <span className="text-sm font-semibold leading-7 sm:text-base">{company.address.join(', ')}</span>
+              <span className="text-sm font-semibold leading-7 sm:text-base">
+                {company.address.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </span>
             </div>
           </div>
           <div className="mt-8">

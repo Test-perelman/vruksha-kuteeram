@@ -56,7 +56,13 @@ export default function AboutSection() {
             <div className="rounded-[1.5rem] border border-forest-950/10 bg-white/40 p-5 shadow-[0_16px_45px_rgba(7,19,13,.06)] backdrop-blur-md">
               <MapPin className="mb-4 h-5 w-5 text-earth-700" />
               <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-forest-900/50">Location</p>
-              <p className="mt-2 text-sm leading-7 text-forest-900/75">{company.address.join(', ')}</p>
+              <p className="mt-2 text-sm leading-7 text-forest-900/75">
+                {company.address.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </p>
             </div>
           </Reveal>
         </div>
