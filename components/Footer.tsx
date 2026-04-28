@@ -10,8 +10,8 @@ export default function Footer() {
             <Image
               src={company.logo}
               alt={company.name}
-              width={190}
-              height={89}
+              width={293}
+              height={88}
               className="h-auto w-40 object-contain"
             />
           </span>

@@ -23,8 +23,8 @@ export default function Header() {
           <Image
             src={company.logo}
             alt={company.name}
-            width={220}
-            height={104}
+            width={293}
+            height={88}
             priority
             className="h-auto w-36 object-contain sm:w-44"
           />
