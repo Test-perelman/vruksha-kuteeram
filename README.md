@@ -1,6 +1,6 @@
 # Vruksha Kuteeram Landing Website
 
-Ultra-premium landscaping landing page for Vruksha Kuteeram Landscape LLP, built with Next.js App Router, Tailwind CSS, Framer Motion, GSAP, Lenis, and extracted brochure/portfolio assets.
+Ultra-premium landscaping, irrigation, and vertical gardening landing page for Vruksha Kuteeram Landscape LLP, built with Next.js App Router, Tailwind CSS, Framer Motion, GSAP, Lenis, and project-specific visual assets.
 
 ## Run Locally
 
@@ -43,8 +43,11 @@ lib/
   content.ts
 public/
   brand-assets/
+    generated/
+    generated-projects/
     logos/
     projects/
+    services/
 docs/
   visual-qa/
 ```

@@ -1,5 +1,6 @@
 export const company = {
   name: 'Vruksha Kuteeram Landscape LLP',
+  logo: '/brand-assets/logos/vruksha-kuteeram-client-logo.png',
   established: '2017',
   tagline: 'Studying nature, to immerse you in the lap of nature',
   positioning: 'We, the nature lovers',
@@ -9,7 +10,7 @@ export const company = {
   awardEvent: 'Indian Leadership Summit 2019',
   address: ['403, Abhinandana Jewel', 'Lanco Hills Road, Manikonda', 'Hyderabad'],
   email: 'vrukshakuteeram2017@gmail.com',
-  domains: ['Landscaping', 'Vertical Garden', 'Irrigation (Drip & Sprinkler)', 'Farm House Development']
+  domains: ['Landscaping', 'Irrigation', 'Vertical Gardening']
 };
 
 export const navigation = [
@@ -22,40 +23,22 @@ export const navigation = [
 
 export const services = [
   {
-    title: 'Execution and Maintenance',
-    image: '/brand-assets/projects/portfolio-p11-02-Image63.webp',
-    summary: 'Multi-disciplinary project execution with long-term upkeep.',
-    points: ['Functional and aesthetically designed landscapes', 'Long-term upkeep', 'Year-round maintenance']
-  },
-  {
-    title: 'Farm House Development Services',
-    image: '/brand-assets/projects/portfolio-p24-01-Image141.webp',
-    summary: 'Farm development elements planned as one living system.',
-    points: ['Kitchen garden', 'Fruit plants', 'Border plants', 'Farm pond', 'Drip and sprinkler systems']
-  },
-  {
-    title: 'Irrigation (Drip & Sprinkler) Services',
-    image: '/brand-assets/projects/portfolio-p21-03-Image127.webp',
-    summary: 'Drip irrigation systems for production and climate-related challenges.',
-    points: ['Drip irrigation systems', 'Border plantation', 'Social forest plantation', 'Orchard plantation', 'Fruit plantation']
-  },
-  {
-    title: 'Annual Maintenance',
-    image: '/brand-assets/projects/portfolio-p34-02-Image185.webp',
-    summary: 'Maintenance focused on long-term landscape performance.',
-    points: ['Long-term upkeep', 'Year-round maintenance', 'Functional landscapes']
-  },
-  {
     title: 'Landscaping',
-    image: '/brand-assets/projects/portfolio-p19-03-Image117.webp',
-    summary: 'Project execution across gardens, parks, farm plots and ventures.',
-    points: ['Garden', 'Parks', 'Farm plots', 'Ventures']
+    image: '/brand-assets/services/service-landscaping.png',
+    summary: 'Designed outdoor spaces with layered planting, lawns, paths, and long-term upkeep in mind.',
+    points: ['Garden design', 'Planting beds', 'Maintenance-ready spaces']
   },
   {
-    title: 'Vertical Garden',
-    image: '/brand-assets/projects/portfolio-p31-02-Image175.webp',
-    summary: 'Natural and eco-friendly preserved greenery systems.',
-    points: ['No irrigation', 'No soil', 'No light', 'Biodegradable preservation treatment']
+    title: 'Irrigation',
+    image: '/brand-assets/services/service-irrigation.png',
+    summary: 'Drip and sprinkler systems planned into the landscape so plants stay healthy and water use stays practical.',
+    points: ['Drip irrigation', 'Sprinkler systems', 'Water-conscious planning']
+  },
+  {
+    title: 'Vertical Gardening',
+    image: '/brand-assets/services/service-vertical-gardening.png',
+    summary: 'Living wall systems that bring dense greenery into compact outdoor, facade, and patio spaces.',
+    points: ['Living walls', 'Dense foliage texture', 'Integrated watering']
   }
 ];
 
@@ -86,9 +69,9 @@ export const projects = [
   },
   {
     name: 'Botanica Foresta (Chevella)',
-    type: 'Farm House / Development',
+    type: 'Landscape / Irrigation Development',
     image: '/brand-assets/generated-projects/botanica-foresta-farmhouse.png',
-    detail: 'Farm house development with productive planting, water systems, and natural outdoor zones.'
+    detail: 'Landscape development with productive planting, water systems, and natural outdoor zones.'
   },
   {
     name: 'Terrace Garden (Bellary)',

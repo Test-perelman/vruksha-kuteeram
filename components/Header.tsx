@@ -2,8 +2,9 @@
 
 import { company, navigation } from '@/lib/content';
 import clsx from 'clsx';
-import { Leaf, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -18,14 +19,15 @@ export default function Header() {
       className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
     >
       <div className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 sm:px-8 lg:px-12">
-        <a href="#home" className="focus-ring group flex items-center gap-3 rounded-full text-cream-50">
-          <span className="grid h-11 w-11 place-items-center rounded-full border border-earth-300/40 bg-cream-50/10 text-earth-300 shadow-[inset_0_0_25px_rgba(255,255,255,.06)] backdrop-blur-md transition-transform duration-500 group-hover:rotate-6">
-            <Leaf className="h-5 w-5" />
-          </span>
-          <span className="leading-none">
-            <span className="block font-serif text-[1.18rem] tracking-[0.02em]">Vruksha Kuteeram</span>
-            <span className="block text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cream-200/100">Landscape LLP</span>
-          </span>
+        <a href="#home" className="focus-ring group inline-flex items-center rounded-[1.15rem] bg-cream-50/95 px-3 py-2 shadow-[0_16px_40px_rgba(7,19,13,.18)] ring-1 ring-cream-100/30 backdrop-blur-md transition-transform duration-500 hover:-translate-y-0.5">
+          <Image
+            src={company.logo}
+            alt={company.name}
+            width={220}
+            height={104}
+            priority
+            className="h-auto w-36 object-contain sm:w-44"
+          />
         </a>
 
         <nav className="hidden items-center gap-2 rounded-full border border-cream-100/20 bg-forest-950/50 p-1 text-cream-50 backdrop-blur-xl lg:flex">

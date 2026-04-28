@@ -79,8 +79,8 @@ export default function Hero() {
       className="garden-noise relative isolate flex min-h-[100svh] items-center overflow-hidden bg-forest-depth text-cream-50"
     >
       <Image
-        src="/brand-assets/projects/brochure-p01-01-Im19.webp"
-        alt="Layered green leaves"
+        src="/brand-assets/generated/hero-landscape-irrigation-vertical-garden-bg.png"
+        alt="Landscape courtyard with irrigation and vertical garden"
         fill
         priority
         sizes="100vw"
@@ -134,8 +134,8 @@ export default function Hero() {
         <motion.div style={{ x: cardX, y: cardY }} className="hero-media relative z-20 hidden min-h-[560px] preserve-3d lg:block">
           <div className="absolute right-4 top-3 h-[520px] w-[78%] rotate-[2deg] overflow-hidden rounded-[2.25rem] border border-cream-100/20 bg-cream-50/10 shadow-botanical backdrop-blur-xl">
             <Image
-              src="/brand-assets/projects/portfolio-p19-03-Image117.webp"
-              alt="A completed landscape project"
+              src="/brand-assets/generated/hero-feature-landscape-irrigation-vertical-garden.png"
+              alt="A completed landscape, irrigation, and vertical garden project"
               fill
               priority
               sizes="(min-width: 1024px) 46vw, 100vw"
@@ -146,7 +146,7 @@ export default function Hero() {
           <div className="absolute bottom-14 left-0 w-[58%] rounded-[2rem] border border-cream-100/20 bg-cream-50/10 p-5 shadow-botanical backdrop-blur-xl">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
               <Image
-                src="/brand-assets/projects/portfolio-p31-02-Image175.webp"
+                src="/brand-assets/services/service-vertical-gardening.png"
                 alt="Vertical garden installation"
                 fill
                 sizes="26vw"
@@ -154,7 +154,7 @@ export default function Hero() {
               />
             </div>
             <div className="mt-4 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-cream-100/75">
-              <span>Vertical Garden</span>
+              <span>Vertical Gardening</span>
               <span className="h-px flex-1 bg-cream-100/20" />
             </div>
           </div>

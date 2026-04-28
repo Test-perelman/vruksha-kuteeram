@@ -1,13 +1,13 @@
 'use client';
 
 import { services } from '@/lib/content';
-import { CalendarCheck, Droplets, Leaf, PanelsTopLeft, Sprout, Trees } from 'lucide-react';
+import { Droplets, PanelsTopLeft, Trees } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import Reveal from './ui/Reveal';
 
-const icons = [Leaf, Trees, Droplets, CalendarCheck, Sprout, PanelsTopLeft];
+const icons = [Trees, Droplets, PanelsTopLeft];
 
 export default function ServicesSection() {
   return (
@@ -18,15 +18,15 @@ export default function ServicesSection() {
           <div>
             <p className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.42em] text-earth-700">Services</p>
             <h2 className="max-w-2xl font-serif text-[clamp(3rem,6vw,6.8rem)] font-medium leading-[0.9] tracking-[-0.055em] text-forest-950 text-balance">
-              Landscaping. Vertical Garden. Irrigation.
+              Landscaping. Irrigation. Vertical Gardening.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-forest-900/100 sm:text-lg">
-            Execution and Maintenance, Farm House Development Services, Irrigation (Drip & Sprinkler) Services and Annual Maintenance.
+            Nature-focused outdoor spaces, water-smart irrigation systems, and vertical greenery designed for homes, campuses, and commercial environments.
           </p>
         </Reveal>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-6">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} Icon={icons[index]} />
           ))}
@@ -67,7 +67,7 @@ function ServiceCard({
         src={service.image}
         alt={service.title}
         fill
-        sizes="(min-width: 1280px) 16vw, (min-width: 768px) 45vw, 100vw"
+        sizes="(min-width: 1024px) 31vw, (min-width: 768px) 45vw, 100vw"
         className="object-cover opacity-70 transition duration-700 group-hover:scale-[1.08] group-hover:opacity-75"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/50 to-forest-950/10" />
