@@ -39,10 +39,10 @@ export default function AboutSection() {
 
           <Reveal delay={0.08} className="mt-9 space-y-6 text-base leading-8 text-forest-900/100 sm:text-lg">
             <p>
-              Established in {company.established}, Vruksha Kuteeram Landscape LLP is based in Hyderabad and works across landscaping, vertical garden, irrigation and farm house development.
+              Established in {company.established}, we work from Hyderabad across landscaping, vertical garden, irrigation and farm house development.
             </p>
             <p>
-              The brand positioning centers nature-centric design, sustainability, eco-friendly landscaping, long-term maintenance, and functional plus aesthetic environments.
+              We shape every site around nature-centric design, sustainability, eco-friendly landscaping, long-term maintenance, and spaces that feel both functional and aesthetic.
             </p>
           </Reveal>
 

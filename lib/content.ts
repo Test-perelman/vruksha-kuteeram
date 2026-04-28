@@ -64,49 +64,49 @@ export const projects = [
     name: 'Kalpataru Residency',
     type: 'Residential / Real Estate',
     image: '/brand-assets/generated-projects/kalpataru-residential-landscape.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Residential landscape planning with layered planting, outdoor circulation, and long-term garden upkeep.'
   },
   {
     name: 'Sumadhura Horizon',
     type: 'Corporate / Large Client',
     image: '/brand-assets/generated-projects/sumadhura-horizon-landscape.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Large-site landscape execution shaped for daily use, visual calm, and reliable maintenance.'
   },
   {
     name: 'My Home Twitza (Gachibowli)',
     type: 'Real Estate / Infrastructure',
     image: '/brand-assets/generated-projects/my-home-podium-landscape.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Podium and community landscape work with planting, movement paths, and irrigation support.'
   },
   {
     name: 'Dr. APJ Abdul Kalam Flyover (Owaisi)',
     type: 'Government / Public Project',
     image: '/brand-assets/generated-projects/apj-flyover-vertical-garden.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Public vertical garden work planned for visibility, durability, and urban conditions.'
   },
   {
     name: 'Botanica Foresta (Chevella)',
     type: 'Farm House / Development',
     image: '/brand-assets/generated-projects/botanica-foresta-farmhouse.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Farm house development with productive planting, water systems, and natural outdoor zones.'
   },
   {
     name: 'Terrace Garden (Bellary)',
     type: 'Residential / Terrace Garden',
     image: '/brand-assets/generated-projects/bellary-terrace-garden.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Terrace garden work for compact outdoor living, planting comfort, and manageable upkeep.'
   },
   {
     name: 'Ahoy Restro (Kompally)',
     type: 'Hospitality / Commercial',
     image: '/brand-assets/generated-projects/ahoy-hospitality-garden.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Hospitality greenery designed to soften guest areas and create a memorable outdoor setting.'
   },
   {
     name: 'Piramal Pharma (Zaheerabad)',
     type: 'Corporate / Large Client',
     image: '/brand-assets/generated-projects/piramal-pharma-campus.png',
-    detail: 'Listed in the company portfolio project experience.'
+    detail: 'Campus landscape work focused on scale, structure, and a dependable maintenance rhythm.'
   }
 ];
 

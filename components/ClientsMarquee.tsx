@@ -11,9 +11,6 @@ export default function ClientsMarquee() {
         <Reveal>
           <p className="text-[0.72rem] font-bold uppercase tracking-[0.42em] text-earth-700">Clients</p>
         </Reveal>
-        <Reveal delay={0.08} className="hidden max-w-xl text-right text-sm leading-7 text-forest-900/50 md:block">
-          Client logos are sourced from the company portfolio document.
-        </Reveal>
       </div>
       <div className="marquee-mask relative flex overflow-hidden">
         <div className="flex min-w-max animate-marquee items-center gap-5 pr-5 hover:[animation-play-state:paused]">
@@ -27,6 +24,7 @@ export default function ClientsMarquee() {
                 alt={logo.name}
                 width={180}
                 height={84}
+                loading="eager"
                 className="max-h-16 w-auto object-contain opacity-60 grayscale transition duration-500 group-hover:opacity-100 group-hover:grayscale-0"
               />
             </div>
