@@ -29,11 +29,30 @@ function cacheControl(filePath) {
     return 'public, max-age=31536000, immutable';
   }
 
-  if (extname(filePath) === '.html') {
-    return 'public, max-age=0, must-revalidate';
+  if (['.html', '.txt', '.json'].includes(extname(filePath))) {
+    return 'no-store, no-cache, must-revalidate, max-age=0, s-maxage=0';
   }
 
   return 'public, max-age=3600';
+}
+
+function responseHeaders(filePath) {
+  const contentType = mimeTypes[extname(filePath)] || 'application/octet-stream';
+  const control = cacheControl(filePath);
+  const headers = {
+    'Cache-Control': control,
+    'Content-Type': contentType,
+    'X-Content-Type-Options': 'nosniff'
+  };
+
+  if (control.includes('no-store')) {
+    headers.Pragma = 'no-cache';
+    headers.Expires = '0';
+    headers['CDN-Cache-Control'] = 'no-store';
+    headers['Surrogate-Control'] = 'no-store';
+  }
+
+  return headers;
 }
 
 function resolveRequestPath(requestUrl) {
@@ -76,13 +95,7 @@ createServer((request, response) => {
     return;
   }
 
-  const contentType = mimeTypes[extname(filePath)] || 'application/octet-stream';
-
-  response.writeHead(200, {
-    'Cache-Control': cacheControl(filePath),
-    'Content-Type': contentType,
-    'X-Content-Type-Options': 'nosniff'
-  });
+  response.writeHead(200, responseHeaders(filePath));
 
   if (request.method === 'HEAD') {
     response.end();
