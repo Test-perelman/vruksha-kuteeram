@@ -140,24 +140,27 @@ export const projectExperience = [
 ];
 
 export const clientLogos = [
-  { name: 'Ahoy Resto', image: '/brand-assets/logos/portfolio-p39-01-Image201.webp' },
-  { name: 'SSP Developers', image: '/brand-assets/logos/portfolio-p39-02-Image203.webp' },
-  { name: 'Nature Scapes', image: '/brand-assets/logos/portfolio-p39-03-Image204.webp' },
-  { name: 'WEAIM', image: '/brand-assets/logos/portfolio-p39-04-Image205.webp' },
-  { name: 'Suhas Projects India', image: '/brand-assets/logos/portfolio-p39-05-Image206.webp' },
-  { name: 'DreamsCape', image: '/brand-assets/logos/portfolio-p39-06-Image207.webp' },
-  { name: 'D.A.V. Public School', image: '/brand-assets/logos/portfolio-p39-07-Image209.webp' },
-  { name: 'GPR', image: '/brand-assets/logos/portfolio-p39-08-Image210.webp' },
-  { name: 'Telangana State Horticulture University', image: '/brand-assets/logos/portfolio-p39-09-Image211.webp' },
-  { name: 'Piramal', image: '/brand-assets/logos/portfolio-p39-10-Image212.webp' },
-  { name: 'Villaggio', image: '/brand-assets/logos/portfolio-p39-11-Image214.webp' },
-  { name: 'Vijetha', image: '/brand-assets/logos/portfolio-p39-12-Image215.webp' },
-  { name: 'SNS', image: '/brand-assets/logos/portfolio-p39-13-Image216.webp' },
-  { name: 'Indian Oil', image: '/brand-assets/logos/portfolio-p39-14-Image217.webp' },
-  { name: 'My Home Group', image: '/brand-assets/logos/portfolio-p39-15-Image219.webp' },
-  { name: 'Kalpa-Taru', image: '/brand-assets/logos/portfolio-p39-16-Image221.webp' },
-  { name: 'Sumadhura Developments', image: '/brand-assets/logos/portfolio-p39-17-Image223.webp' },
-  { name: 'Pranava Group', image: '/brand-assets/logos/portfolio-p39-18-Image225.webp' },
-  { name: 'Vaibhavi Properties', image: '/brand-assets/logos/portfolio-p39-19-Image227.webp' },
-  { name: 'Palm Exotica', image: '/brand-assets/logos/portfolio-p39-20-Image228.webp' }
+  { name: 'Ahoy Resto', image: '/brand-assets/logos/clients-transparent/ahoy-resto.png' },
+  { name: 'SSP Developers', image: '/brand-assets/logos/clients-transparent/ssp-developers.png' },
+  { name: 'Nature Scapes', image: '/brand-assets/logos/clients-transparent/nature-scapes.png' },
+  { name: 'WEAIM', image: '/brand-assets/logos/clients-transparent/weaim.png' },
+  { name: 'Suhas Projects India', image: '/brand-assets/logos/clients-transparent/suhas-projects-india.png' },
+  { name: 'DreamsCape', image: '/brand-assets/logos/clients-transparent/dreamscape.png' },
+  { name: 'D.A.V. Public School', image: '/brand-assets/logos/clients-transparent/dav-public-school.png' },
+  { name: 'GPR', image: '/brand-assets/logos/clients-transparent/gpr.png' },
+  {
+    name: 'Professor Jayashankar Telangana State Agricultural University',
+    image: '/brand-assets/logos/clients-transparent/telangana-horticultural-university.png'
+  },
+  { name: 'Piramal', image: '/brand-assets/logos/clients-official/piramal.svg' },
+  { name: 'Villaggio', image: '/brand-assets/logos/clients-transparent/villaggio.png' },
+  { name: 'Vijetha', image: '/brand-assets/logos/clients-transparent/vijetha.png' },
+  { name: 'SNS', image: '/brand-assets/logos/clients-transparent/sns.png' },
+  { name: 'IndianOil', image: '/brand-assets/logos/clients-official/indianoil.svg' },
+  { name: 'My Home Group', image: '/brand-assets/logos/clients-official/my-home-constructions.png' },
+  { name: 'Kalpa-Taru', image: '/brand-assets/logos/clients-transparent/kalpa-taru.png' },
+  { name: 'Sumadhura Developments', image: '/brand-assets/logos/clients-transparent/sumadhura.png' },
+  { name: 'Pranava Group', image: '/brand-assets/logos/clients-transparent/pranava-group.png' },
+  { name: 'Vaibhavi Properties', image: '/brand-assets/logos/clients-transparent/vaibhavi-properties.png' },
+  { name: 'Palm Exotica', image: '/brand-assets/logos/clients-transparent/palm-exotica.png' }
 ];
