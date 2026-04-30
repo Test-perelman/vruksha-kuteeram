@@ -38,8 +38,67 @@ export const company = {
       text: 'We create low-maintenance gardens, outdoor environments, and green features that keep improving everyday life.'
     }
   ],
-  aboutPromise: "We don't just create gardens - we build living environments that grow with you."
+  aboutPromise: "We don't just create gardens, we build living environments that grow with you."
 };
+
+export const trustCards = [
+  {
+    title: 'Designed to survive beautifully',
+    text: 'Practical, sustainable plans shaped around water, weather, soil, and everyday use.'
+  },
+  {
+    title: 'Execution that stays close',
+    text: 'An experienced team focused on long-term plant survival from planning to handover.'
+  },
+  {
+    title: 'No vague promises',
+    text: 'Clear pricing, visible timelines, and low-maintenance solutions clients can live with.'
+  }
+];
+
+export const founderSection = {
+  intro:
+    'Landscaping is not just decoration. A good garden has to survive real weather, real water patterns, and real daily use.',
+  note:
+    'My focus is simple: build outdoor spaces that look beautiful on day one, stay practical after handover, and keep growing with the people who live around them.',
+  signature: 'Anil Konduti',
+  images: [
+    {
+      title: 'Founder at Indian Leadership Award 2019',
+      image: '/brand-assets/founder/anil-konduti-award-portrait.webp',
+      alt: 'Anil Konduti at the Indian Leadership Award 2019 ceremony'
+    },
+    {
+      title: 'Brochure project team photograph',
+      image: '/brand-assets/founder/brochure-vertical-garden-team-crop.webp',
+      alt: 'Vruksha Kuteeram team at a vertical garden project from the company brochure'
+    }
+  ]
+};
+
+export const associationItems = [
+  {
+    name: 'Professor Jayashankar Telangana State Agricultural University',
+    label: 'Institutional association listed in client assets',
+    image: '/brand-assets/logos/clients-transparent/telangana-horticultural-university.png'
+  },
+  {
+    name: 'IndianOil',
+    label: 'Corporate project association',
+    image: '/brand-assets/logos/clients-official/indianoil.svg'
+  },
+  {
+    name: 'Piramal Enterprises Ltd',
+    label: 'Corporate project association',
+    image: '/brand-assets/logos/clients-official/piramal.svg',
+    darkBackground: true
+  },
+  {
+    name: 'My Home Group',
+    label: 'Real estate project association',
+    image: '/brand-assets/logos/clients-official/my-home-constructions.png'
+  }
+];
 
 export const navigation = [
   { label: 'Home', href: '#home' },
