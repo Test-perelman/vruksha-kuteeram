@@ -1,7 +1,9 @@
 import { company } from '@/lib/content';
-import { Award, CheckCircle2 } from 'lucide-react';
+import { Award, CheckCircle2, Droplets, Leaf, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Reveal from './ui/Reveal';
+
+const aboutIcons = [Sparkles, Droplets, Leaf];
 
 export default function AboutSection() {
   return (
@@ -37,37 +39,53 @@ export default function AboutSection() {
             </h2>
           </Reveal>
 
-          <Reveal delay={0.08} className="mt-9 space-y-6 text-base leading-8 text-forest-900/100 sm:text-lg">
-            <p>
-              Established in {company.established}, we work from Hyderabad across landscaping, irrigation, and vertical gardening.
-            </p>
-            <p>
-              We shape every site around nature-centric design, sustainability, eco-friendly landscaping, long-term maintenance, and spaces that feel both functional and aesthetic.
-            </p>
+          <Reveal delay={0.08} className="mt-9">
+            <div className="relative overflow-hidden rounded-lg border border-earth-500/35 bg-forest-950 px-5 py-7 text-cream-50 shadow-botanical sm:px-7 lg:px-8">
+              <div className="absolute inset-x-0 top-0 h-1 bg-earth-300" />
+              <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full border border-earth-300/25" />
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-earth-300">About Us</p>
+              <p className="mt-4 max-w-3xl text-xl font-extrabold leading-9 text-cream-50 sm:text-2xl sm:leading-10">
+                {company.aboutIntro}
+              </p>
+            </div>
           </Reveal>
 
-          <Reveal delay={0.14} className="mt-10">
-            <div className="relative overflow-hidden rounded-lg border border-earth-500/35 bg-forest-950 px-5 py-7 text-cream-50 shadow-botanical sm:px-7">
-              <div className="absolute inset-x-0 top-0 h-1 bg-earth-300" />
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-earth-300">Client confidence</p>
-              <h3 className="mt-3 max-w-2xl font-serif text-[clamp(2.1rem,3.7vw,3.7rem)] font-medium leading-none text-cream-50">
-                <span className="box-decoration-clone bg-earth-300 px-2 text-forest-950">
-                  Why Clients Trust Vruksha Kuteeram
-                </span>
-              </h3>
-              <ul className="mt-7 grid gap-3">
-                {company.trustReasons.map((reason) => (
-                  <li
-                    key={reason}
-                    className="flex items-center gap-3 rounded-lg border border-earth-300/40 bg-cream-50 px-4 py-3 text-base font-bold leading-snug text-forest-950 shadow-[0_10px_24px_rgba(7,19,13,.18)] sm:text-lg"
-                  >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-earth-300 text-forest-950">
-                      <CheckCircle2 className="h-4 w-4" />
+          <Reveal delay={0.14} className="mt-5 grid gap-4">
+            {company.aboutHighlights.map((highlight, index) => {
+              const Icon = aboutIcons[index];
+
+              return (
+                <article
+                  key={highlight.title}
+                  className="rounded-lg border border-forest-950/10 bg-white/65 p-5 shadow-[0_16px_45px_rgba(7,19,13,.08)] backdrop-blur-md sm:p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-950 text-earth-300 shadow-[0_12px_30px_rgba(7,19,13,.18)]">
+                      <Icon className="h-5 w-5" />
                     </span>
-                    <span>{reason}</span>
-                  </li>
-                ))}
-              </ul>
+                    <div>
+                      <p className="text-[0.66rem] font-bold uppercase tracking-[0.22em] text-earth-700">{highlight.label}</p>
+                      <h3 className="mt-2 font-serif text-2xl font-semibold leading-tight text-forest-950 sm:text-3xl">
+                        {highlight.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-base font-medium leading-8 text-forest-900/80">{highlight.text}</p>
+                </article>
+              );
+            })}
+          </Reveal>
+
+          <Reveal delay={0.2} className="mt-5">
+            <div className="rounded-lg border border-earth-500/25 bg-cream-50/85 p-5 shadow-[0_18px_50px_rgba(117,88,49,.14)] sm:p-6">
+              <div className="flex items-start gap-3">
+                <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-earth-300 text-forest-950">
+                  <CheckCircle2 className="h-4 w-4" />
+                </span>
+                <p className="font-serif text-[clamp(1.85rem,3vw,3rem)] font-medium leading-tight text-forest-950">
+                  {company.aboutPromise}
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

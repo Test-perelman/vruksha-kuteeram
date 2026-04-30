@@ -25,7 +25,7 @@ export default function ClientsMarquee() {
                 width={180}
                 height={84}
                 loading="eager"
-                className="max-h-16 w-auto object-contain opacity-60 grayscale transition duration-500 group-hover:opacity-100 group-hover:grayscale-0"
+                className="max-h-16 w-auto object-contain opacity-100 transition duration-500 group-hover:scale-[1.03]"
               />
             </div>
           ))}

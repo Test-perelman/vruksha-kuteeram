@@ -18,12 +18,33 @@ export const company = {
     'Experienced Execution Team',
     'Transparent Pricing and Timelines',
     'Low Maintenance Landscape Solutions'
-  ]
+  ],
+  aboutIntro:
+    'At Vruksha Kuteeram Landscape LLP, we transform ordinary spaces into sustainable, visually striking landscapes that enhance lifestyle and property value.',
+  aboutHighlights: [
+    {
+      label: 'Experience',
+      title: '9+ years of landscape expertise',
+      text: 'From design and execution to long-term care, our team provides complete landscaping solutions built around each site.'
+    },
+    {
+      label: 'Sustainability',
+      title: 'Designed to thrive for the long run',
+      text: 'Every landscape balances creativity with practical planning, efficient water usage, and plant health that lasts.'
+    },
+    {
+      label: 'Modern living',
+      title: 'Beautiful spaces with minimal upkeep',
+      text: 'We create low-maintenance gardens, outdoor environments, and green features that keep improving everyday life.'
+    }
+  ],
+  aboutPromise: "We don't just create gardens - we build living environments that grow with you."
 };
 
 export const navigation = [
   { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Clients', href: '#clients' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' }
 ];
@@ -122,8 +143,14 @@ export const clientLogos = [
   { name: 'Ahoy Resto', image: '/brand-assets/logos/portfolio-p39-01-Image201.webp' },
   { name: 'SSP Developers', image: '/brand-assets/logos/portfolio-p39-02-Image203.webp' },
   { name: 'Nature Scapes', image: '/brand-assets/logos/portfolio-p39-03-Image204.webp' },
+  { name: 'WEAIM', image: '/brand-assets/logos/portfolio-p39-04-Image205.webp' },
+  { name: 'Suhas Projects India', image: '/brand-assets/logos/portfolio-p39-05-Image206.webp' },
   { name: 'DreamsCape', image: '/brand-assets/logos/portfolio-p39-06-Image207.webp' },
+  { name: 'D.A.V. Public School', image: '/brand-assets/logos/portfolio-p39-07-Image209.webp' },
+  { name: 'GPR', image: '/brand-assets/logos/portfolio-p39-08-Image210.webp' },
+  { name: 'Telangana State Horticulture University', image: '/brand-assets/logos/portfolio-p39-09-Image211.webp' },
   { name: 'Piramal', image: '/brand-assets/logos/portfolio-p39-10-Image212.webp' },
+  { name: 'Villaggio', image: '/brand-assets/logos/portfolio-p39-11-Image214.webp' },
   { name: 'Vijetha', image: '/brand-assets/logos/portfolio-p39-12-Image215.webp' },
   { name: 'SNS', image: '/brand-assets/logos/portfolio-p39-13-Image216.webp' },
   { name: 'Indian Oil', image: '/brand-assets/logos/portfolio-p39-14-Image217.webp' },
