@@ -1,12 +1,14 @@
 'use client';
 
-import { company } from '@/lib/content';
+import { company, services } from '@/lib/content';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { Droplets, PanelsTopLeft, Trees } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useMemo, useRef } from 'react';
-import MagneticButton from './ui/MagneticButton';
 
 const titleWords = ['We, the', 'nature', 'lovers'];
+const categoryIcons = [Trees, Droplets, PanelsTopLeft];
+const cardOffsets = ['', 'lg:ml-8', 'lg:ml-16'];
 
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null);
@@ -16,8 +18,8 @@ export default function Hero() {
   const springY = useSpring(mouseY, { stiffness: 80, damping: 22, mass: 0.5 });
   const leafX = useTransform(springX, [-0.5, 0.5], [-28, 28]);
   const leafY = useTransform(springY, [-0.5, 0.5], [-18, 18]);
-  const cardX = useTransform(springX, [-0.5, 0.5], [18, -18]);
-  const cardY = useTransform(springY, [-0.5, 0.5], [12, -12]);
+  const cardX = useTransform(springX, [-0.5, 0.5], [12, -12]);
+  const cardY = useTransform(springY, [-0.5, 0.5], [8, -8]);
 
   const particles = useMemo(
     () =>
@@ -102,9 +104,9 @@ export default function Hero() {
         />
       ))}
 
-      <div className="mx-auto grid w-full max-w-[1500px] items-center gap-12 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12 lg:pb-24 lg:pt-32">
+      <div className="mx-auto grid w-full max-w-[1500px] items-center gap-10 px-5 pb-16 pt-24 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-12 lg:px-12 lg:pb-24 lg:pt-32">
         <div className="hero-copy relative z-20 max-w-4xl">
-          <h1 aria-label={company.positioning} className="font-serif text-[clamp(4.2rem,11vw,10.8rem)] font-medium leading-[0.82] tracking-[-0.075em] text-balance">
+          <h1 aria-label={company.positioning} className="font-serif text-[clamp(3.7rem,11vw,10.8rem)] font-medium leading-[0.84] tracking-[-0.075em] text-balance lg:leading-[0.82]">
             {titleWords.map((word, index) => (
               <span
                 key={word}
@@ -117,50 +119,48 @@ export default function Hero() {
             ))}
           </h1>
           <p
-            className="hero-subcopy mt-8 max-w-2xl text-base leading-8 text-cream-100/75 sm:text-lg"
+            className="hero-subcopy mt-8 max-w-3xl text-xl font-extrabold leading-8 text-cream-50 sm:text-2xl sm:leading-10"
             style={{ animationDelay: '120ms' }}
           >
             {company.tagline}
           </p>
-          <div
-            className="hero-actions mt-10 flex flex-col gap-4 sm:flex-row"
-            style={{ animationDelay: '180ms' }}
-          >
-            <MagneticButton href="#projects">Explore Projects</MagneticButton>
-            <MagneticButton href="#contact" variant="ghost">Contact Us</MagneticButton>
-          </div>
+          <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-cream-100/80 sm:text-base sm:leading-8">
+            {company.supportingTagline}
+          </p>
         </div>
 
-        <motion.div style={{ x: cardX, y: cardY }} className="hero-media relative z-20 hidden min-h-[560px] preserve-3d lg:block">
-          <div className="absolute right-4 top-3 h-[520px] w-[78%] rotate-[2deg] overflow-hidden rounded-[2.25rem] border border-cream-100/20 bg-cream-50/10 shadow-botanical backdrop-blur-xl">
-            <Image
-              src="/brand-assets/generated/hero-feature-landscape-irrigation-vertical-garden-20260429.png"
-              alt="A completed landscape, irrigation, and vertical garden project"
-              fill
-              priority
-              sizes="(min-width: 1024px) 46vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-950/100 via-forest-950/10 to-transparent" />
-          </div>
-          <div className="absolute bottom-14 left-0 w-[58%] rounded-[2rem] border border-cream-100/20 bg-cream-50/10 p-5 shadow-botanical backdrop-blur-xl">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
-              <Image
-                src="/brand-assets/services/service-vertical-gardening-20260429.png"
-                alt="Vertical garden installation"
-                fill
-                sizes="26vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="mt-4 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-cream-100/75">
-              <span>Vertical Gardening</span>
-              <span className="h-px flex-1 bg-cream-100/20" />
-            </div>
-          </div>
-          <div className="absolute right-10 top-24 rounded-full border border-earth-300/40 bg-forest-950/40 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-earth-300 backdrop-blur-xl">
-            Established {company.established}
-          </div>
+        <motion.div style={{ x: cardX, y: cardY }} className="hero-media relative z-20 grid gap-2 preserve-3d md:grid-cols-3 md:gap-3 lg:grid-cols-1 lg:gap-5">
+          {services.map((service, index) => {
+            const Icon = categoryIcons[index];
+
+            return (
+              <article
+                key={service.title}
+                className={`group relative grid grid-cols-[7rem_minmax(0,1fr)] items-stretch gap-3 overflow-hidden rounded-[1.25rem] border border-cream-100/20 bg-cream-50/10 p-3 shadow-botanical backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-earth-300/50 md:block md:rounded-[1.5rem] lg:grid lg:max-w-[32rem] lg:grid-cols-[10rem_minmax(0,1fr)] lg:gap-4 xl:grid-cols-[11rem_minmax(0,1fr)] ${cardOffsets[index]}`}
+              >
+                <div className="relative min-h-20 overflow-hidden rounded-[0.9rem] md:aspect-[4/3] md:min-h-0 md:rounded-[1.05rem] lg:aspect-auto lg:min-h-36">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    priority={index === 0}
+                    sizes="(min-width: 1024px) 34vw, (min-width: 640px) 30vw, 100vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
+                </div>
+                <div className="flex items-center gap-3 px-0 pb-0 md:mt-4 md:items-start md:px-1 md:pb-1 lg:mt-0 lg:items-center lg:px-0">
+                  <span className="hidden h-10 w-10 shrink-0 place-items-center rounded-full border border-earth-300/40 bg-forest-950/70 text-earth-300 sm:grid">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h2 className="text-sm font-extrabold uppercase tracking-[0.16em] text-cream-50">{service.title}</h2>
+                    <p className="mt-2 hidden text-xs font-medium leading-5 text-cream-100/75 sm:line-clamp-2">{service.summary}</p>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </motion.div>
       </div>
 

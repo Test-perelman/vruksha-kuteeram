@@ -42,13 +42,6 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href={`mailto:${company.email}`}
-          className="focus-ring hidden rounded-full border border-earth-300/50 px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-earth-300 transition-all duration-300 hover:bg-earth-300 hover:text-forest-950 lg:inline-flex"
-        >
-          Email
-        </a>
-
         <button
           aria-label="Toggle menu"
           aria-expanded={open}

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: 'Landscaping, irrigation, and vertical gardening services in Hyderabad.',
   openGraph: {
     title: 'Vruksha Kuteeram Landscape LLP',
-    description: 'Studying nature, to immerse you in the lap of nature'
+    description: "We don't just create gardens. We build living landscapes that last."
   }
 };
 

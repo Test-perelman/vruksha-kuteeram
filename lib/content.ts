@@ -2,7 +2,8 @@ export const company = {
   name: 'Vruksha Kuteeram Landscape LLP',
   logo: '/brand-assets/logos/vruksha-kuteeram-client-logo-20260429.png',
   established: '2017',
-  tagline: 'Studying nature, to immerse you in the lap of nature',
+  tagline: "We don't just create gardens. We build living landscapes that last.",
+  supportingTagline: 'Premium landscape execution and maintenance for villas, apartments, and commercial spaces with guaranteed plant sustainability and low-maintenance solutions.',
   positioning: 'We, the nature lovers',
   founder: 'Anil Konduti',
   founderRole: 'Founder',
@@ -14,9 +15,8 @@ export const company = {
 };
 
 export const navigation = [
-  { label: 'Services', href: '#services' },
+  { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Clients', href: '#clients' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' }
 ];
@@ -47,49 +47,49 @@ export const projects = [
     name: 'Kalpataru Residency',
     type: 'Residential / Real Estate',
     image: '/brand-assets/generated-projects/kalpataru-residential-landscape.png',
-    detail: 'Residential landscape planning with layered planting, outdoor circulation, and long-term garden upkeep.'
+    detail: 'Executed the apartment landscape with central lawns, pathway greens, tower-side planting beds, soil preparation, mulching, and maintenance-ready detailing.'
   },
   {
     name: 'Sumadhura Horizon',
-    type: 'Corporate / Large Client',
+    type: 'Residential / Real Estate',
     image: '/brand-assets/generated-projects/sumadhura-horizon-landscape.png',
-    detail: 'Large-site landscape execution shaped for daily use, visual calm, and reliable maintenance.'
+    detail: 'Created open lawn areas, clipped shrub borders, feature planting, and clean circulation zones for a polished residential community landscape.'
   },
   {
     name: 'My Home Twitza (Gachibowli)',
     type: 'Real Estate / Infrastructure',
     image: '/brand-assets/generated-projects/my-home-podium-landscape.png',
-    detail: 'Podium and community landscape work with planting, movement paths, and irrigation support.'
+    detail: 'Installed vertical garden panels on the Gachibowli frontage, using patterned foliage and integrated watering for a dense urban green facade.'
   },
   {
     name: 'Dr. APJ Abdul Kalam Flyover (Owaisi)',
     type: 'Government / Public Project',
     image: '/brand-assets/generated-projects/apj-flyover-vertical-garden.png',
-    detail: 'Public vertical garden work planned for visibility, durability, and urban conditions.'
+    detail: 'Delivered public vertical gardens on flyover columns and traffic-side panels, with plant modules arranged for visibility, durability, and urban upkeep.'
   },
   {
     name: 'Botanica Foresta (Chevella)',
     type: 'Landscape / Irrigation Development',
     image: '/brand-assets/generated-projects/botanica-foresta-farmhouse.png',
-    detail: 'Landscape development with productive planting, water systems, and natural outdoor zones.'
+    detail: 'Developed the farmhouse landscape with large-scale plantation layout, tree guards, soil preparation, and irrigation support across the Chevella site.'
   },
   {
     name: 'Terrace Garden (Bellary)',
     type: 'Residential / Terrace Garden',
     image: '/brand-assets/generated-projects/bellary-terrace-garden.png',
-    detail: 'Terrace garden work for compact outdoor living, planting comfort, and manageable upkeep.'
+    detail: 'Built a rooftop garden with lawn zones, stepping-stone paths, a curved deck area, boundary planters, and low-maintenance terrace planting.'
   },
   {
     name: 'Ahoy Restro (Kompally)',
     type: 'Hospitality / Commercial',
     image: '/brand-assets/generated-projects/ahoy-hospitality-garden.png',
-    detail: 'Hospitality greenery designed to soften guest areas and create a memorable outdoor setting.'
+    detail: 'Shaped the restaurant landscape with lawns, palms, pathway lighting, planted edges, and outdoor circulation for a greener guest setting.'
   },
   {
     name: 'Piramal Pharma (Zaheerabad)',
     type: 'Corporate / Large Client',
     image: '/brand-assets/generated-projects/piramal-pharma-campus.png',
-    detail: 'Campus landscape work focused on scale, structure, and a dependable maintenance rhythm.'
+    detail: 'Executed campus planting and upkeep around the Piramal facility, including entrance beds, tree underplanting, pathway edges, and neat perimeter greens.'
   }
 ];
 
