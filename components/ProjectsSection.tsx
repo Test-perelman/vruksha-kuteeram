@@ -29,10 +29,10 @@ export default function ProjectsSection() {
         <Reveal className="flex flex-col justify-center">
           <p className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.42em] text-earth-300">Projects</p>
           <h2 className="max-w-3xl font-serif text-[clamp(3rem,6.2vw,7rem)] font-medium leading-[0.88] tracking-[-0.055em] text-balance">
-            8+ years of experience.
+            Back by a decade of experience.
           </h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-cream-100/75 sm:text-lg sm:leading-9">
-            Hundreds of completed projects serving clients across Telangana and Andhra Pradesh.
+            100+ successful projects, serving clients across Telangana and Andhra Pradesh.
           </p>
 
           <AnimatePresence mode="wait">
