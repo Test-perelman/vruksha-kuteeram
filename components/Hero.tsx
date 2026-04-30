@@ -2,12 +2,12 @@
 
 import { company, services } from '@/lib/content';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Droplets, PanelsTopLeft, Trees } from 'lucide-react';
+import { PanelsTopLeft, Sprout, Trees } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useMemo, useRef } from 'react';
 
-const titleLines = ['"We don\'t just', 'create gardens -', 'we build living', 'landscapes that last."'];
-const categoryIcons = [Trees, Droplets, PanelsTopLeft];
+const titleLines = ['We don\'t just', 'create gardens -', 'we build living', 'landscapes that last.'];
+const categoryIcons = [Trees, Sprout, PanelsTopLeft];
 const cardOffsets = ['', 'lg:ml-8', 'lg:ml-16'];
 
 export default function Hero() {
@@ -119,7 +119,7 @@ export default function Hero() {
             ))}
           </h1>
           <p
-            className="hero-subcopy mt-8 max-w-3xl text-xl font-extrabold leading-8 text-cream-50 sm:text-2xl sm:leading-10"
+            className="hero-subcopy mt-7 max-w-2xl text-sm font-medium leading-7 text-cream-100/85 sm:text-base sm:leading-8"
             style={{ animationDelay: '120ms' }}
           >
             {company.supportingTagline}

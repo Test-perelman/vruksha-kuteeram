@@ -1,13 +1,13 @@
 'use client';
 
 import { services } from '@/lib/content';
-import { Droplets, PanelsTopLeft, Trees } from 'lucide-react';
+import { PanelsTopLeft, Sprout, Trees } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import Reveal from './ui/Reveal';
 
-const icons = [Trees, Droplets, PanelsTopLeft];
+const icons = [Trees, Sprout, PanelsTopLeft];
 
 export default function ServicesSection() {
   return (
@@ -18,11 +18,11 @@ export default function ServicesSection() {
           <div>
             <p className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.42em] text-earth-700">Services</p>
             <h2 className="max-w-2xl font-serif text-[clamp(3rem,6vw,6.8rem)] font-medium leading-[0.9] tracking-[-0.055em] text-forest-950 text-balance">
-              Landscaping. Irrigation. Vertical Gardening.
+              Landscaping. Indoor Garden. Vertical Gardening.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-forest-900/100 sm:text-lg">
-            Nature-focused outdoor spaces, water-smart irrigation systems, and vertical greenery designed for homes, campuses, and commercial environments.
+            Nature-focused outdoor spaces, indoor gardens, and vertical greenery designed for homes, campuses, and commercial environments.
           </p>
         </Reveal>
 

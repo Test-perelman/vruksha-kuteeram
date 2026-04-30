@@ -19,10 +19,10 @@ const body = Manrope({
 
 export const metadata: Metadata = {
   title: 'Vruksha Kuteeram Landscape LLP',
-  description: 'Landscaping, irrigation, and vertical gardening services in Hyderabad.',
+  description: 'Landscaping, indoor garden, and vertical gardening services in Hyderabad.',
   openGraph: {
     title: 'Vruksha Kuteeram Landscape LLP',
-    description: "\"We don't just create gardens - we build living landscapes that last.\""
+    description: "We don't just create gardens - we build living landscapes that last."
   }
 };
 

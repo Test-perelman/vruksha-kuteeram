@@ -2,16 +2,16 @@ export const company = {
   name: 'Vruksha Kuteeram Landscape LLP',
   logo: '/brand-assets/logos/vruksha-kuteeram-client-logo-20260429.png',
   established: '2017',
-  tagline: "\"We don't just create gardens - we build living landscapes that last.\"",
+  tagline: "We don't just create gardens - we build living landscapes that last.",
   supportingTagline: 'Premium landscape execution and maintenance for villas, apartments, and commercial spaces - with guaranteed plant sustainability and low-maintenance solutions',
-  positioning: "\"We don't just create gardens - we build living landscapes that last.\"",
+  positioning: "We don't just create gardens - we build living landscapes that last.",
   founder: 'Anil Konduti',
   founderRole: 'Founder',
   award: 'Indian Leadership Award 2019',
   awardEvent: 'Indian Leadership Summit 2019',
   address: ['Plot No-931', 'Flat -301', 'Street No-48', 'Ayush Avenue', 'Sri Ayyappa Society'],
   email: 'vrukshakuteeram2017@gmail.com',
-  domains: ['Landscaping', 'Irrigation', 'Vertical Gardening'],
+  domains: ['Landscaping', 'Indoor Garden', 'Vertical Gardening'],
   trustReasons: [
     'Practical and Sustainable Designs',
     'Focus on Long-Term Plant Survival',
@@ -116,10 +116,10 @@ export const services = [
     points: ['Garden design', 'Planting beds', 'Maintenance-ready spaces']
   },
   {
-    title: 'Irrigation',
+    title: 'Indoor Garden',
     image: '/brand-assets/services/service-irrigation-20260429.png',
-    summary: 'Drip and sprinkler systems planned into the landscape so plants stay healthy and water use stays practical.',
-    points: ['Drip irrigation', 'Sprinkler systems', 'Water-conscious planning']
+    summary: 'Interior green spaces planned with resilient plants, clean detailing, and easy everyday upkeep.',
+    points: ['Indoor planters', 'Low-light planting', 'Maintenance-ready spaces']
   },
   {
     title: 'Vertical Gardening',
