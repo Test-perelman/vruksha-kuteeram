@@ -58,8 +58,7 @@ function resolveRequestPath(requestUrl) {
   const htmlPath = `${fullPath}.html`;
   if (existsSync(htmlPath)) return htmlPath;
 
-  const fallbackPath = join(root, '404.html');
-  return existsSync(fallbackPath) ? fallbackPath : join(root, 'index.html');
+  return join(root, 'index.html');
 }
 
 createServer((request, response) => {
@@ -79,7 +78,7 @@ createServer((request, response) => {
 
   const contentType = mimeTypes[extname(filePath)] || 'application/octet-stream';
 
-  response.writeHead(filePath.endsWith('404.html') ? 404 : 200, {
+  response.writeHead(200, {
     'Cache-Control': cacheControl(filePath),
     'Content-Type': contentType,
     'X-Content-Type-Options': 'nosniff'
