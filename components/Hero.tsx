@@ -6,7 +6,7 @@ import { Droplets, PanelsTopLeft, Trees } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useMemo, useRef } from 'react';
 
-const titleWords = ['We, the', 'nature', 'lovers'];
+const titleLines = ['"We don\'t just', 'create gardens -', 'we build living', 'landscapes that last."'];
 const categoryIcons = [Trees, Droplets, PanelsTopLeft];
 const cardOffsets = ['', 'lg:ml-8', 'lg:ml-16'];
 
@@ -106,15 +106,15 @@ export default function Hero() {
 
       <div className="mx-auto grid w-full max-w-[1500px] items-center gap-10 px-5 pb-16 pt-24 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-12 lg:px-12 lg:pb-24 lg:pt-32">
         <div className="hero-copy relative z-20 max-w-4xl">
-          <h1 aria-label={company.positioning} className="font-serif text-[clamp(3.7rem,11vw,10.8rem)] font-medium leading-[0.84] tracking-[-0.075em] text-balance lg:leading-[0.82]">
-            {titleWords.map((word, index) => (
+          <h1 aria-label={company.positioning} className="font-serif text-[clamp(3.1rem,6.7vw,6.9rem)] font-semibold leading-[0.88] tracking-[-0.04em] text-balance lg:leading-[0.86]">
+            {titleLines.map((line, index) => (
               <span
-                key={word}
+                key={line}
                 aria-hidden="true"
-                className={index === 1 ? 'hero-word block text-earth-300' : 'hero-word block'}
+                className={index >= 2 ? 'hero-word block text-earth-300' : 'hero-word block'}
                 style={{ animationDelay: `${index * 45}ms` }}
               >
-                {word}
+                {line}
               </span>
             ))}
           </h1>
@@ -122,9 +122,6 @@ export default function Hero() {
             className="hero-subcopy mt-8 max-w-3xl text-xl font-extrabold leading-8 text-cream-50 sm:text-2xl sm:leading-10"
             style={{ animationDelay: '120ms' }}
           >
-            {company.tagline}
-          </p>
-          <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-cream-100/80 sm:text-base sm:leading-8">
             {company.supportingTagline}
           </p>
         </div>
