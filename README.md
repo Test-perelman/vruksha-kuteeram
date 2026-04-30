@@ -19,25 +19,26 @@ npm run build
 npm run start
 ```
 
-## Shared Hosting Performance Mode
+## Vercel Deployment
 
-This project is configured as a static export for constrained shared hosting:
+This project is configured as a standard Next.js App Router application for Vercel:
 
-- `/` is forced to static rendering with `dynamic = 'error'`, `revalidate = false`, and `fetchCache = 'only-cache'`.
-- There are no API routes, server actions, SSR data loaders, request-time `fetch` calls, or dynamic request APIs.
-- `next build` writes plain static files to `out/`.
-- `npm run start` serves `out/` with the lightweight `server.js` static server instead of `next start`.
-- Public brand assets and hashed `/_next/static` files use immutable cache headers from `server.js`.
-- HTML revalidates on each visit so content edits appear immediately after deployment.
-- Animations and interactivity remain client-side through Framer Motion, GSAP, and Lenis.
+- Vercel should use the `Next.js` framework preset.
+- Production branch should be `main`.
+- Install command can stay as Vercel's default, or `npm ci`.
+- Build command is `npm run build`.
+- Start command is `npm run start`, which runs `next start` for local production checks.
+- No static export upload, `out/` upload, `.htaccess`, or custom Node static server is required.
+- Vercel will create preview deployments for pull requests and production deployments when `main` is updated.
 
-Deploy with the production commands only:
+Recommended Vercel setup:
 
-```bash
-npm ci --omit=dev
-npm run build
-npm run start
-```
+1. Import the GitHub repository into Vercel.
+2. Confirm the root directory is the repository root.
+3. Leave the output directory unset so Vercel uses the framework default.
+4. Add the custom domain in Vercel after the preview deployment is verified.
+5. Point the GoDaddy DNS records to Vercel.
+6. Remove or disable the old Hostinger deployment after the Vercel domain is live.
 
 ## Structure
 
