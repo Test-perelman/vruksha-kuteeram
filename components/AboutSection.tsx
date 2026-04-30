@@ -1,5 +1,5 @@
 import { company } from '@/lib/content';
-import { Award, MapPin, Sprout } from 'lucide-react';
+import { Award, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import Reveal from './ui/Reveal';
 
@@ -46,23 +46,28 @@ export default function AboutSection() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.14} className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[1.5rem] border border-forest-950/10 bg-white/40 p-5 shadow-[0_16px_45px_rgba(7,19,13,.06)] backdrop-blur-md">
-              <Sprout className="mb-4 h-5 w-5 text-earth-700" />
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-forest-900/50">Founder</p>
-              <p className="mt-2 font-serif text-3xl text-forest-950">{company.founder}</p>
-              <p className="mt-1 text-sm font-semibold text-forest-900/50">{company.founderRole}</p>
-            </div>
-            <div className="rounded-[1.5rem] border border-forest-950/10 bg-white/40 p-5 shadow-[0_16px_45px_rgba(7,19,13,.06)] backdrop-blur-md">
-              <MapPin className="mb-4 h-5 w-5 text-earth-700" />
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-forest-900/50">Location</p>
-              <p className="mt-2 text-sm leading-7 text-forest-900/75">
-                {company.address.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
+          <Reveal delay={0.14} className="mt-10">
+            <div className="relative overflow-hidden rounded-lg border border-earth-500/35 bg-forest-950 px-5 py-7 text-cream-50 shadow-botanical sm:px-7">
+              <div className="absolute inset-x-0 top-0 h-1 bg-earth-300" />
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.24em] text-earth-300">Client confidence</p>
+              <h3 className="mt-3 max-w-2xl font-serif text-[clamp(2.1rem,3.7vw,3.7rem)] font-medium leading-none text-cream-50">
+                <span className="box-decoration-clone bg-earth-300 px-2 text-forest-950">
+                  Why Clients Trust Vruksha Kuteeram
+                </span>
+              </h3>
+              <ul className="mt-7 grid gap-3">
+                {company.trustReasons.map((reason) => (
+                  <li
+                    key={reason}
+                    className="flex items-center gap-3 rounded-lg border border-earth-300/40 bg-cream-50 px-4 py-3 text-base font-bold leading-snug text-forest-950 shadow-[0_10px_24px_rgba(7,19,13,.18)] sm:text-lg"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-earth-300 text-forest-950">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </span>
+                    <span>{reason}</span>
+                  </li>
                 ))}
-              </p>
+              </ul>
             </div>
           </Reveal>
         </div>

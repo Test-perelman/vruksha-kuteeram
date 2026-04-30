@@ -11,7 +11,14 @@ export const company = {
   awardEvent: 'Indian Leadership Summit 2019',
   address: ['Plot No-931', 'Flat -301', 'Street No-48', 'Ayush Avenue', 'Sri Ayyappa Society'],
   email: 'vrukshakuteeram2017@gmail.com',
-  domains: ['Landscaping', 'Irrigation', 'Vertical Gardening']
+  domains: ['Landscaping', 'Irrigation', 'Vertical Gardening'],
+  trustReasons: [
+    'Practical and Sustainable Designs',
+    'Focus on Long-Term Plant Survival',
+    'Experienced Execution Team',
+    'Transparent Pricing and Timelines',
+    'Low Maintenance Landscape Solutions'
+  ]
 };
 
 export const navigation = [
