@@ -17,7 +17,7 @@ export default function ClientsMarquee() {
           {logos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
-              className="group grid h-32 w-64 place-items-center px-4 transition duration-500 hover:-translate-y-1 sm:h-36 sm:w-80"
+              className="group grid h-32 w-64 place-items-center rounded-lg border border-forest-950/10 bg-white px-5 shadow-[0_14px_38px_rgba(7,19,13,.06)] transition duration-500 hover:-translate-y-1 sm:h-36 sm:w-80"
             >
               <Image
                 src={logo.image}
@@ -25,7 +25,7 @@ export default function ClientsMarquee() {
                 width={300}
                 height={150}
                 loading="eager"
-                className="h-24 w-full max-w-[16rem] object-contain opacity-100 drop-shadow-[0_10px_18px_rgba(7,19,13,.08)] transition duration-500 group-hover:scale-[1.04] sm:h-28 sm:max-w-[19rem]"
+                className="h-24 w-full max-w-[16rem] object-contain opacity-100 transition duration-500 group-hover:scale-[1.04] sm:h-28 sm:max-w-[19rem]"
               />
             </div>
           ))}
